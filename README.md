@@ -1,4 +1,4 @@
-# Binary Quadratic Programming (QP) Solver using Gurobi
+# Quadratic Programming (QP) Solver using Gurobi
 
 This repository contains a Python implementation for solving Quadratic Programming (QP) problems with binary variables and linear constraints using the Gurobi optimizer. The project focuses on solving QP problems from the QPLIB library and compares two linearization techniques: **Glover** and **Glover-Woolsey**.
 
@@ -123,17 +123,6 @@ The repository includes an analysis of the results obtained from solving 20 sele
 Based on the analysis:
 - **Glover's linearization** is recommended for larger problems due to its computational efficiency and ability to find good solutions quickly.
 - For smaller problems where bound quality is critical, **Glover-Woolsey** may be preferred.
-
----
-
-## License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
-For any questions or issues, please open an issue in the repository or contact the author.
-
 
 ---
 
