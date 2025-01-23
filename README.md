@@ -74,57 +74,62 @@ result_G = solve_Glover_gurobi(name, typee, sense, n, m, Q0, b0, q0, A0, ccl, cc
 
 ## Functions
 
-1. readaQP(nameproblem)
-Input: The name of the QP problem (e.g., QPLIB_0067).
-Output: Problem data including the objective function, constraints, and variable bounds.
+### 1. `readaQP(nameproblem)`
+- **Input**: The name of the QP problem (e.g., `QPLIB_0067`).
+- **Output**: Problem data including the objective function, constraints, and variable bounds.
 
-2. solve_QP_gurobi(name, typee, sense, n, m, Q0, b0, q0, A0, ccl, ccu)
-Input: Problem data.
-Output: Solves the QP problem directly using Gurobi and returns the solution.
+### 2. `solve_QP_gurobi(name, typee, sense, n, m, Q0, b0, q0, A0, ccl, ccu)`
+- **Input**: Problem data.
+- **Output**: Solves the QP problem directly using Gurobi and returns the solution.
 
-3. solve_Glover_Woolsey_gurobi(name, typee, sense, n, m, Q0, b0, q0, A0, ccl, ccu)
-Input: Problem data.
-Output: Solves the QP problem using the Glover-Woolsey linearization and returns the solution.
+### 3. `solve_Glover_Woolsey_gurobi(name, typee, sense, n, m, Q0, b0, q0, A0, ccl, ccu)`
+- **Input**: Problem data.
+- **Output**: Solves the QP problem using the Glover-Woolsey linearization and returns the solution.
 
-4. solve_Glover_gurobi(name, typee, sense, n, m, Q0, b0, q0, A0, ccl, ccu)
-Input: Problem data.
-Output: Solves the QP problem using Glover's linearization and returns the solution.
+### 4. `solve_Glover_gurobi(name, typee, sense, n, m, Q0, b0, q0, A0, ccl, ccu)`
+- **Input**: Problem data.
+- **Output**: Solves the QP problem using Glover's linearization and returns the solution.
+
+---
 
 ## Results and Analysis
+
 The repository includes an analysis of the results obtained from solving 20 selected QP problems. Key findings include:
 
-Quality of Bounds:
-The Glover-Woolsey method generally provides better bounds from the LP relaxation compared to Glover's method.
+### Quality of Bounds:
+- The **Glover-Woolsey method** generally provides better bounds from the LP relaxation compared to Glover's method.
+- However, **Glover's method** often finds better integer solutions within the time limit.
 
-However, Glover's method often finds better integer solutions within the time limit.
+### Computational Time:
+- The computational time increases with the number of binary variables and constraints.
+- **Glover's method** is faster due to fewer additional constraints.
 
-Computational Time:
-The computational time increases with the number of binary variables and constraints.
+### Optimality:
+- Only a few instances could be solved to optimality within 10 minutes using either method.
+- The maximum problem size that could be solved to optimality within the time limit was **220 binary variables and 121 constraints**.
 
-Glover's method is faster due to fewer additional constraints.
+### Advantages and Disadvantages:
+- **Glover-Woolsey**:
+  - *Advantages*: Provides better bounds.
+  - *Disadvantages*: Requires more computational resources.
+- **Glover**:
+  - *Advantages*: Faster and more scalable.
+  - *Disadvantages*: May provide weaker bounds.
 
-Optimality:
-Only a few instances could be solved to optimality within 10 minutes using either method.
-
-The maximum problem size that could be solved to optimality within the time limit was 220 binary variables and 121 constraints.
-
-Advantages and Disadvantages:
-Glover-Woolsey: Provides better bounds but requires more computational resources.
-
-Glover: Faster and more scalable but may provide weaker bounds.
+---
 
 ## Conclusion
-Based on the analysis, Glover's linearization is recommended for larger problems due to its computational efficiency and ability to find good solutions quickly. However, for smaller problems where bound quality is critical, Glover-Woolsey may be preferred.
+
+Based on the analysis:
+- **Glover's linearization** is recommended for larger problems due to its computational efficiency and ability to find good solutions quickly.
+- For smaller problems where bound quality is critical, **Glover-Woolsey** may be preferred.
+
+---
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
 
 For any questions or issues, please open an issue in the repository or contact the author.
-
-Copy
-genera algunos tags
-Aquí tienes algunos tags sugeridos para este repositorio:
-
-markdown
-
-
