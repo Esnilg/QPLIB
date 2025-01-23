@@ -10,6 +10,7 @@ This repository contains a Python implementation for solving Quadratic Programmi
 5. [Results and Analysis](#results-and-analysis)
 6. [Conclusion](#conclusion)
 7. [License](#license)
+8. [Aplicaciones de los Programas Binarios Cuadráticos (BQPs) en la Vida Real](#aplicaciones-de-los-programas-binarios-cuadráticos-(BQPs)-en-la-vida-real)
 
 ---
 
@@ -126,7 +127,7 @@ Based on the analysis:
 
 ---
 
-# Aplicaciones de los Programas Binarios Cuadráticos (BQPs) en la Vida Real
+## Aplicaciones de los Programas Binarios Cuadráticos (BQPs) en la Vida Real
 
 Los **Programas Binarios Cuadráticos (Binary Quadratic Programs, BQPs)** son un tipo de problema de optimización que combina variables binarias (0 o 1) con una función objetivo cuadrática y restricciones lineales. Estos modelos tienen una amplia gama de aplicaciones en la vida real, especialmente en áreas donde las decisiones son discretas y las interacciones entre variables son importantes. A continuación, se presentan algunas aplicaciones prácticas:
 
